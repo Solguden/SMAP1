@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    tools:context=".EditActivity">
+
+
+    <TextView
+        android:id="@+id/editTextName"
+        android:layout_width="160dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="83dp"
+        android:layout_marginLeft="83dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="89dp"
+        android:layout_marginRight="89dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/colorPrimaryDark"
+        android:paddingLeft="5dp"
+        android:text="Name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/editTextScore"
+        app:layout_constraintEnd_toEndOf="@+id/editTextScore"
+        app:layout_constraintStart_toStartOf="@+id/editTextWordRating"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <TextView
+        android:id="@+id/editTextScore"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginBottom="39dp"
+        android:background="@color/colorScore"
+        android:gravity="center"
+        android:text="score"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/editSlider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextWordRating"
+        app:layout_constraintTop_toBottomOf="@+id/editTextName" />
+
+    <Button
+        android:id="@+id/EditCancelButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="107dp"
+        android:layout_marginRight="107dp"
+        android:text="Cancel"
+        app:layout_constraintBottom_toBottomOf="@+id/EditOkButton"
+        app:layout_constraintEnd_toStartOf="@+id/EditOkButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/EditOkButton">
+
+    </Button>
+
+    <Button
+        android:id="@+id/EditOkButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginBottom="81dp"
+        android:text="OK"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/EditCancelButton"
+        app:layout_constraintTop_toBottomOf="@+id/editNoteEdit">
+
+    </Button>
+
+    <SeekBar
+        android:id="@+id/editSlider"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="27dp"
+        android:background="@color/colorScore"
+        android:max="10"
+        android:progress="5"
+        app:layout_constraintBottom_toTopOf="@+id/detailsNotetext"
+        app:layout_constraintEnd_toEndOf="@+id/editNoteEdit"
+        app:layout_constraintStart_toStartOf="@+id/editTextWordRating"
+        app:layout_constraintTop_toBottomOf="@+id/editTextScore"></SeekBar>
+
+    <EditText
+        android:id="@+id/editNoteEdit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginBottom="30dp"
+        android:text=". . ."
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintBottom_toTopOf="@+id/EditOkButton"
+        app:layout_constraintEnd_toEndOf="@+id/EditOkButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailsNotetext" />
+
+    <TextView
+        android:id="@+id/detailsNotetext"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="20dp"
+        android:text="Note:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/editNoteEdit"
+        app:layout_constraintEnd_toEndOf="@+id/editTextWordRating"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editSlider" />
+
+    <TextView
+        android:id="@+id/editTextWordRating"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginLeft="31dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
+        android:text="Word Rating:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextScore"
+        app:layout_constraintEnd_toStartOf="@+id/editTextScore"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextScore" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
